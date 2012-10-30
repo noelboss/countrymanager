@@ -8,10 +8,16 @@
 		<languageKey index="default" type="array">
 			<label index="tx_countrymanager_domain_model_countrylanguage">Country</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.title">Country Backend Label</label>
-			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.menulabel">Country Menu Label</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.flag">Flag</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.country">Country</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
 			<label index="tx_countrymanager_domain_model_country">Country</label>
+			<label index="tx_countrymanager_domain_model_country.cnshorten">cnshorten</label>
+			<label index="tx_countrymanager_domain_model_country.cnshortlocal">cnshortlocal</label>
+			<label index="tx_countrymanager_domain_model_country.cntldomain">cntldomain</label>
+			<label index="tx_countrymanager_domain_model_language">Language</label>
+			<label index="tx_countrymanager_domain_model_language.lgnameen">lgnameen</label>
 		</languageKey>
 	</data>
 </T3locallang>

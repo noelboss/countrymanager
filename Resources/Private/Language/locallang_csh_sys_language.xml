@@ -8,9 +8,10 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="title.description">Country Backend Label</label>
-			<label index="language.description">Language</label>
 			<label index="menulabel.description">Country Menu Label</label>
+			<label index="flag.description">Flag</label>
 			<label index="country.description">Country</label>
+			<label index="language.description">Language</label>
 		</languageKey>
 	</data>
 </T3locallang>

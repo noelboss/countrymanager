@@ -27,12 +27,11 @@
 /**
  *
  *
- * @package nbocountrylanguage
+ * @package countrymanager
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
 class Tx_Countrymanager_Domain_Model_Country extends Tx_Extbase_DomainObject_AbstractEntity {
-
 
 	/**
 	 * Country Backend Label
@@ -42,7 +41,24 @@ class Tx_Countrymanager_Domain_Model_Country extends Tx_Extbase_DomainObject_Abs
 	 * @validate NotEmpty
 	 */
 	protected $cnshorten;
-	
+
+	/**
+	 * Country Backend Label
+	 * cnshortlocal
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $cnshortlocal;
+
+	/**
+	 * Country Backend Label
+	 * cntldomain
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $cntldomain;
 
 	/**
 	 * Returns the cnshorten
@@ -59,20 +75,9 @@ class Tx_Countrymanager_Domain_Model_Country extends Tx_Extbase_DomainObject_Abs
 	 * @param string $cnshorten
 	 * @return void
 	 */
-	public function setCnShortEn($cnshorten) {
+	public function setCnShorten($cnshorten) {
 		$this->cnshorten = $cnshorten;
 	}
-	
-	
-	/**
-	 * Country Backend Label
-	 * cnshortlocal
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $cnshortlocal;
-	
 
 	/**
 	 * Returns the cnshortlocal
@@ -92,17 +97,6 @@ class Tx_Countrymanager_Domain_Model_Country extends Tx_Extbase_DomainObject_Abs
 	public function setCnshortlocal($cnshortlocal) {
 		$this->cnshortlocal = $cnshortlocal;
 	}
-
-
-	/**
-	 * Country Backend Label
-	 * cntldomain
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $cntldomain;
-	
 
 	/**
 	 * Returns the cntldomain

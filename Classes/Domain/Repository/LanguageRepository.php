@@ -31,7 +31,7 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Countrymanager_Domain_Repository_CountryRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Countrymanager_Domain_Repository_LanguageRepository extends Tx_Extbase_Persistence_Repository {
 
 }
 ?>

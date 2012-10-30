@@ -70,23 +70,6 @@ class Tx_Countrymanager_Domain_Model_CountryLanguageTest extends Tx_Extbase_Test
 	/**
 	 * @test
 	 */
-	public function getLanguageReturnsInitialValueForString() { }
-
-	/**
-	 * @test
-	 */
-	public function setLanguageForStringSetsLanguage() { 
-		$this->fixture->setLanguage('Conceived at T3CON10');
-
-		$this->assertSame(
-			'Conceived at T3CON10',
-			$this->fixture->getLanguage()
-		);
-	}
-	
-	/**
-	 * @test
-	 */
 	public function getMenulabelReturnsInitialValueForString() { }
 
 	/**
@@ -98,6 +81,23 @@ class Tx_Countrymanager_Domain_Model_CountryLanguageTest extends Tx_Extbase_Test
 		$this->assertSame(
 			'Conceived at T3CON10',
 			$this->fixture->getMenulabel()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getFlagReturnsInitialValueForString() { }
+
+	/**
+	 * @test
+	 */
+	public function setFlagForStringSetsFlag() { 
+		$this->fixture->setFlag('Conceived at T3CON10');
+
+		$this->assertSame(
+			'Conceived at T3CON10',
+			$this->fixture->getFlag()
 		);
 	}
 	
@@ -121,6 +121,29 @@ class Tx_Countrymanager_Domain_Model_CountryLanguageTest extends Tx_Extbase_Test
 		$this->assertSame(
 			$dummyObject,
 			$this->fixture->getCountry()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getLanguageReturnsInitialValueForTx_Countrymanager_Domain_Model_Language() { 
+		$this->assertEquals(
+			NULL,
+			$this->fixture->getLanguage()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setLanguageForTx_Countrymanager_Domain_Model_LanguageSetsLanguage() { 
+		$dummyObject = new Tx_Countrymanager_Domain_Model_Language();
+		$this->fixture->setLanguage($dummyObject);
+
+		$this->assertSame(
+			$dummyObject,
+			$this->fixture->getLanguage()
 		);
 	}
 	

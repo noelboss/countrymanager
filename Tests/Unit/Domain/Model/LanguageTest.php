@@ -25,7 +25,7 @@
  ***************************************************************/
 
 /**
- * Test case for class Tx_Countrymanager_Domain_Model_Country.
+ * Test case for class Tx_Countrymanager_Domain_Model_Language.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -36,14 +36,14 @@
  *
  * @author Noel Bossart <n.company at me dot com>
  */
-class Tx_Countrymanager_Domain_Model_CountryTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Countrymanager_Domain_Model_LanguageTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Countrymanager_Domain_Model_Country
+	 * @var Tx_Countrymanager_Domain_Model_Language
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Countrymanager_Domain_Model_Country();
+		$this->fixture = new Tx_Countrymanager_Domain_Model_Language();
 	}
 
 	public function tearDown() {
@@ -53,51 +53,17 @@ class Tx_Countrymanager_Domain_Model_CountryTest extends Tx_Extbase_Tests_Unit_B
 	/**
 	 * @test
 	 */
-	public function getCnshortenReturnsInitialValueForString() { }
+	public function getLgnameenReturnsInitialValueForString() { }
 
 	/**
 	 * @test
 	 */
-	public function setCnshortenForStringSetsCnshorten() { 
-		$this->fixture->setCnshorten('Conceived at T3CON10');
+	public function setLgnameenForStringSetsLgnameen() { 
+		$this->fixture->setLgnameen('Conceived at T3CON10');
 
 		$this->assertSame(
 			'Conceived at T3CON10',
-			$this->fixture->getCnshorten()
-		);
-	}
-	
-	/**
-	 * @test
-	 */
-	public function getCnshortlocalReturnsInitialValueForString() { }
-
-	/**
-	 * @test
-	 */
-	public function setCnshortlocalForStringSetsCnshortlocal() { 
-		$this->fixture->setCnshortlocal('Conceived at T3CON10');
-
-		$this->assertSame(
-			'Conceived at T3CON10',
-			$this->fixture->getCnshortlocal()
-		);
-	}
-	
-	/**
-	 * @test
-	 */
-	public function getCntldomainReturnsInitialValueForString() { }
-
-	/**
-	 * @test
-	 */
-	public function setCntldomainForStringSetsCntldomain() { 
-		$this->fixture->setCntldomain('Conceived at T3CON10');
-
-		$this->assertSame(
-			'Conceived at T3CON10',
-			$this->fixture->getCntldomain()
+			$this->fixture->getLgnameen()
 		);
 	}
 	

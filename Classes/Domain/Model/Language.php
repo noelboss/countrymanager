@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Noel Bossart <n.company at me dot com>, noelboss.ch
+ *  (c) 2012 Noel Bossart <n.company at me dot com>, www.noelboss.ch
  *  
  *  All rights reserved
  *
@@ -31,7 +31,33 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Countrymanager_Domain_Repository_CountryRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Countrymanager_Domain_Model_Language extends Tx_Extbase_DomainObject_AbstractEntity {
+
+	/**
+	 * lgnameen
+	 *
+	 * @var string
+	 */
+	protected $lgnameen;
+
+	/**
+	 * Returns the lgnameen
+	 *
+	 * @return string $lgnameen
+	 */
+	public function getLgnameen() {
+		return $this->lgnameen;
+	}
+
+	/**
+	 * Sets the lgnameen
+	 *
+	 * @param string $lgnameen
+	 * @return void
+	 */
+	public function setLgnameen($lgnameen) {
+		$this->lgnameen = $lgnameen;
+	}
 
 }
 ?>

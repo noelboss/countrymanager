@@ -43,19 +43,12 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	protected $flag;
 
 	/**
+	 * Country Backend Label
 	 *
 	 * @var string
 	 * @validate NotEmpty
 	 */
 	protected $title;
-
-	/**
-	 * Language
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $language;
 
 	/**
 	 * Country Menu Label
@@ -71,6 +64,13 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	 * @var Tx_Countrymanager_Domain_Model_Country
 	 */
 	protected $country;
+
+	/**
+	 * Language
+	 *
+	 * @var Tx_Countrymanager_Domain_Model_Language
+	 */
+	protected $language;
 
 	/**
 	 * Returns the title
@@ -111,25 +111,6 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	}
 
 	/**
-	 * Returns the language
-	 *
-	 * @return string $language
-	 */
-	public function getLanguage() {
-		return $this->language;
-	}
-
-	/**
-	 * Sets the language
-	 *
-	 * @param string $language
-	 * @return void
-	 */
-	public function setLanguage($language) {
-		$this->language = $language;
-	}
-
-	/**
 	 * Returns the menulabel
 	 *
 	 * @return string $menulabel
@@ -165,6 +146,25 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	 */
 	public function setCountry(Tx_Countrymanager_Domain_Model_Country $country) {
 		$this->country = $country;
+	}
+
+	/**
+	 * Returns the language
+	 *
+	 * @return Tx_Countrymanager_Domain_Model_Language $language
+	 */
+	public function getLanguage() {
+		return $this->language;
+	}
+
+	/**
+	 * Sets the language
+	 *
+	 * @param Tx_Countrymanager_Domain_Model_Language $language
+	 * @return void
+	 */
+	public function setLanguage(Tx_Countrymanager_Domain_Model_Language $language) {
+		$this->language = $language;
 	}
 
 }

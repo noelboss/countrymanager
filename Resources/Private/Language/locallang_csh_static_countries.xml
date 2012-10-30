@@ -7,6 +7,9 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index="cnshorten.description">cnshorten</label>
+			<label index="cnshortlocal.description">cnshortlocal</label>
+			<label index="cntldomain.description">cntldomain</label>
 		</languageKey>
 	</data>
 </T3locallang>

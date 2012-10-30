@@ -8,12 +8,19 @@
 		<languageKey index="default" type="array">
 			<label index="tx_countrymanager_domain_model_countrylanguage">Country Language</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.title">Country Backend Label</label>
-			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.menulabel">Menulabel</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.flag">Flag</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.country">Country</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
 			<label index="sys_language.tx_extbase_type.Tx_Countrymanager_CountryLanguage">Typo3 Country Manager CountryLanguage</label>
 			<label index="tx_countrymanager_domain_model_country">Country</label>
+			<label index="tx_countrymanager_domain_model_country.cnshorten">Cnshorten</label>
+			<label index="tx_countrymanager_domain_model_country.cnshortlocal">Cnshortlocal</label>
+			<label index="tx_countrymanager_domain_model_country.cntldomain">Cntldomain</label>
 			<label index="static_countries.tx_extbase_type.Tx_Countrymanager_Country">Typo3 Country Manager Country</label>
+			<label index="tx_countrymanager_domain_model_language">Language</label>
+			<label index="tx_countrymanager_domain_model_language.lgnameen">Lgnameen</label>
+			<label index="static_languages.tx_extbase_type.Tx_Countrymanager_Language">Typo3 Country Manager Language</label>
 		</languageKey>
 	</data>
 </T3locallang>
