@@ -6,8 +6,7 @@
 		<csh_table>static_languages</csh_table>
 	</meta>
 	<data type="array">
-	<languageKey index="default" type="array">
-	   
+		<languageKey index="default" type="array">
 			<label index="lgnameen.description">lgnameen</label>
 		</languageKey>
 	</data>

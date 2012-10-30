@@ -20,16 +20,17 @@ config.tx_extbase{
                     }
                 }
             }
-            Tx_Countrymanager_Domain_Model_Langague {
+            
+            Tx_Countrymanager_Domain_Model_Language {
                 mapping {
                     tableName = static_languages
                     recordType = Tx_Countrymanager_Language
-                    columns {
-                        lg_name_en.mapOnProperty = lgnameen
-                    }
-                }
-            }
+	                columns {
+	                    lg_name_en.mapOnProperty = lgnameen
+	                }
+				}
+            }	
             
-        }
+    	}
     }
 }

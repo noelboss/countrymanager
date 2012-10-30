@@ -35,15 +35,6 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 
 	/**
 	 * Country Backend Label
-	 * Flag
-	 *
-	 * @var string
-	 * @validate NotEmpty
-	 */
-	protected $flag;
-
-	/**
-	 * Country Backend Label
 	 *
 	 * @var string
 	 * @validate NotEmpty
@@ -57,6 +48,14 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	 * @validate NotEmpty
 	 */
 	protected $menulabel;
+
+	/**
+	 * Flag
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $flag;
 
 	/**
 	 * Country

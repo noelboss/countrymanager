@@ -12,7 +12,7 @@
 		<f:for each="{sameCountries}" as="countryLanguage" iteration="langIter">
 			<f:if condition="{countryLanguage.uid} != {currentCountry.uid}">
 				<f:if condition="{countryLanguage.uid -> f:cObject(typoscriptObjectPath: 'module.NavLanguageLink')}">
-					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage.uid}">{countryLanguage.language}</f:link.page></li>
+					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage.uid}">{countryLanguage.language.lgnameen}</f:link.page></li>
 				</f:if>
 			</f:if>
 		</f:for>

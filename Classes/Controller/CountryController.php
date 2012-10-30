@@ -31,7 +31,24 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Countrymanager_Domain_Repository_CountryRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Countrymanager_Controller_CountryController extends Tx_Extbase_MVC_Controller_ActionController {
+
+	/**
+	 * countryRepository
+	 *
+	 * @var Tx_Countrymanager_Domain_Repository_CountryRepository
+	 */
+	protected $countryRepository;
+
+	/**
+	 * injectCountryRepository
+	 *
+	 * @param Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository
+	 * @return void
+	 */
+	public function injectCountryRepository(Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository) {
+		$this->countryRepository = $countryRepository;
+	}
 
 }
 ?>

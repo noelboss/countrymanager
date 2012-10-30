@@ -13,6 +13,8 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	// non-cacheable actions
 	array(
 		'CountryLanguage' => '',
+		'Country' => '',
+		'Language' => '',
 		
 	)
 );
@@ -27,6 +29,8 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	// non-cacheable actions
 	array(
 		'CountryLanguage' => '',
+		'Country' => '',
+		'Language' => '',
 		
 	)
 );
@@ -41,6 +45,8 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	// non-cacheable actions
 	array(
 		'CountryLanguage' => '',
+		'Country' => '',
+		'Language' => '',
 		
 	)
 );
