@@ -67,5 +67,22 @@ class Tx_Countrymanager_Domain_Model_LanguageTest extends Tx_Extbase_Tests_Unit_
 		);
 	}
 	
+	/**
+	 * @test
+	 */
+	public function getLgisoReturnsInitialValueForString() { }
+
+	/**
+	 * @test
+	 */
+	public function setLgisoForStringSetsLgiso() { 
+		$this->fixture->setLgiso('Conceived at T3CON10');
+
+		$this->assertSame(
+			'Conceived at T3CON10',
+			$this->fixture->getLgiso()
+		);
+	}
+	
 }
 ?>

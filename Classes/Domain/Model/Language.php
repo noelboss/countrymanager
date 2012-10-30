@@ -41,6 +41,13 @@ class Tx_Countrymanager_Domain_Model_Language extends Tx_Extbase_DomainObject_Ab
 	protected $lgnameen;
 
 	/**
+	 * lgiso
+	 *
+	 * @var string
+	 */
+	protected $lgiso;
+
+	/**
 	 * Returns the lgnameen
 	 *
 	 * @return string $lgnameen
@@ -57,6 +64,25 @@ class Tx_Countrymanager_Domain_Model_Language extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function setLgnameen($lgnameen) {
 		$this->lgnameen = $lgnameen;
+	}
+
+	/**
+	 * Returns the lgiso
+	 *
+	 * @return string $lgiso
+	 */
+	public function getLgiso() {
+		return $this->lgiso;
+	}
+
+	/**
+	 * Sets the lgiso
+	 *
+	 * @param string $lgiso
+	 * @return void
+	 */
+	public function setLgiso($lgiso) {
+		$this->lgiso = $lgiso;
 	}
 
 }

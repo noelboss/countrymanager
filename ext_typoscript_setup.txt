@@ -27,6 +27,8 @@ config.tx_extbase{
                     recordType = Tx_Countrymanager_Language
 	                columns {
 	                    lg_name_en.mapOnProperty = lgnameen
+	                    lg_name_local.mapOnProperty = lgnamelocal
+	                    lgiso.mapOnProperty = iso
 	                }
 				}
             }	

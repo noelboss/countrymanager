@@ -20,6 +20,7 @@
 			<label index="static_countries.tx_extbase_type.Tx_Countrymanager_Country">Typo3 Country Manager Country</label>
 			<label index="tx_countrymanager_domain_model_language">Language</label>
 			<label index="tx_countrymanager_domain_model_language.lgnameen">Lgnameen</label>
+			<label index="tx_countrymanager_domain_model_language.lgiso">Lgiso</label>
 			<label index="static_languages.tx_extbase_type.Tx_Countrymanager_Language">Typo3 Country Manager Language</label>
 		</languageKey>
 	</data>
