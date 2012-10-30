@@ -41,22 +41,40 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	protected $countryRepository;
 
 	/**
+	 * countryLanguageRepository
+	 *
+	 * @var Tx_Countrymanager_Domain_Repository_CountryLanguageRepository
+	 */
+	protected $countryLanguageRepository;
+
+	/**
+	 * injectCountryLanguageRepository
+	 *
+	 * @param Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository
+	 * @return void
+	 */
+	public function injectCountryLanguageRepository(Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository) {
+		$this->$countryLanguageRepository = $countryLanguageRepository;
+	}
+
+
+	/**
 	 * injectCountryRepository
 	 *
-	 * @param Tx_Countrymanager_Domain_Repository_CountryRepository $CountryRepository
+	 * @param Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository
 	 * @return void
 	 */
 	public function injectCountryRepository(Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository) {
 		$this->countryRepository = $countryRepository;
 	}
-
+	
 	/**
-	 * action list
+	 * action countries
 	 *
 	 * @return void
 	 * @param Tx_CountryLanguagemanager_Domain_Model_CountryLanguageLanguage
 	 */
-	public function listAction() {
+	public function countriesAction() {
 		$countries = $this->countryLanguageRepository->findAll();
 		$countryLanguage = $this->countryLanguageRepository->findByUid($GLOBALS['TSFE']->sys_language_uid);
 
@@ -64,7 +82,7 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 		$this->view->assign('sameCountries', $this->countryLanguageRepository->findByFlag($countryLanguage->getFlag()));
 		$this->view->assign('countries', $countries);
 	}
-	
+
 	/**
 	 * action country
 	 *
@@ -75,7 +93,7 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 		$countryLanguage = $this->countryLanguageRepository->findByUid($GLOBALS['TSFE']->sys_language_uid);
 		$this->view->assign('currentCountry', $countryLanguage);
 	}
-	
+
 	/**
 	 * action languages
 	 *
@@ -90,6 +108,7 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 		$this->view->assign('sameCountries', $this->countryLanguageRepository->findByFlag($countryLanguage->getFlag()));
 		$this->view->assign('countries', $countries);
 	}
+
 
 }
 ?>

@@ -68,8 +68,7 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	/**
 	 * Country
 	 *
-	 * @var string
-	 * @validate NotEmpty
+	 * @var Tx_Countrymanager_Domain_Model_Country
 	 */
 	protected $country;
 
@@ -152,7 +151,7 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	/**
 	 * Returns the country
 	 *
-	 * @return string $country
+	 * @return Tx_Countrymanager_Domain_Model_Country $country
 	 */
 	public function getCountry() {
 		return $this->country;
@@ -161,10 +160,10 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	/**
 	 * Sets the country
 	 *
-	 * @param string $country
+	 * @param Tx_Countrymanager_Domain_Model_Country $country
 	 * @return void
 	 */
-	public function setCountry($country) {
+	public function setCountry(Tx_Countrymanager_Domain_Model_Country $country) {
 		$this->country = $country;
 	}
 

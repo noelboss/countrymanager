@@ -12,6 +12,8 @@
 			<label index="tx_countrymanager_domain_model_countrylanguage.menulabel">Menulabel</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.country">Country</label>
 			<label index="sys_language.tx_extbase_type.Tx_Countrymanager_CountryLanguage">Typo3 Country Manager CountryLanguage</label>
+			<label index="tx_countrymanager_domain_model_country">Country</label>
+			<label index="static_countries.tx_extbase_type.Tx_Countrymanager_Country">Typo3 Country Manager Country</label>
 		</languageKey>
 	</data>
 </T3locallang>

@@ -104,16 +104,22 @@ class Tx_Countrymanager_Domain_Model_CountryLanguageTest extends Tx_Extbase_Test
 	/**
 	 * @test
 	 */
-	public function getCountryReturnsInitialValueForString() { }
+	public function getCountryReturnsInitialValueForTx_Countrymanager_Domain_Model_Country() { 
+		$this->assertEquals(
+			NULL,
+			$this->fixture->getCountry()
+		);
+	}
 
 	/**
 	 * @test
 	 */
-	public function setCountryForStringSetsCountry() { 
-		$this->fixture->setCountry('Conceived at T3CON10');
+	public function setCountryForTx_Countrymanager_Domain_Model_CountrySetsCountry() { 
+		$dummyObject = new Tx_Countrymanager_Domain_Model_Country();
+		$this->fixture->setCountry($dummyObject);
 
 		$this->assertSame(
-			'Conceived at T3CON10',
+			$dummyObject,
 			$this->fixture->getCountry()
 		);
 	}

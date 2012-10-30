@@ -11,6 +11,7 @@
 			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.menulabel">Country Menu Label</label>
 			<label index="tx_countrymanager_domain_model_countrylanguage.country">Country</label>
+			<label index="tx_countrymanager_domain_model_country">Country</label>
 		</languageKey>
 	</data>
 </T3locallang>
