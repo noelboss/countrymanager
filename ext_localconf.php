@@ -5,9 +5,9 @@ if (!defined('TYPO3_MODE')) {
 
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
-	'Countries',
+	'Country',
 	array(
-		'CountryLanguage' => 'countries',
+		'CountryLanguage' => 'country',
 		
 	),
 	// non-cacheable actions
@@ -19,9 +19,9 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 
 Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
-	'Country',
+	'Countries',
 	array(
-		'CountryLanguage' => 'country',
+		'CountryLanguage' => 'countries',
 		
 	),
 	// non-cacheable actions

@@ -5,14 +5,14 @@ if (!defined('TYPO3_MODE')) {
 
 Tx_Extbase_Utility_Extension::registerPlugin(
 	$_EXTKEY,
-	'Countries',
-	'Display list of Countries'
+	'Country',
+	'Display current country'
 );
 
 Tx_Extbase_Utility_Extension::registerPlugin(
 	$_EXTKEY,
-	'Country',
-	'Display active country'
+	'Countries',
+	'Display list of countries'
 );
 
 Tx_Extbase_Utility_Extension::registerPlugin(
@@ -22,7 +22,6 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 );
 
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Typo3 Country Manager');
-
 $tmp_countrymanager_columns = array(
 	'title' => array(
 		'exclude' => 1,

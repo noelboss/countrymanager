@@ -8,6 +8,7 @@ config.tx_extbase{
                     recordType = Tx_Countrymanager_CountryLanguage
                 }
             }
+            
             Tx_Countrymanager_Domain_Model_Country {
                 mapping {
                     tableName = static_countries

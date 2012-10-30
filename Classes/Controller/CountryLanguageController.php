@@ -57,7 +57,6 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 		$this->$countryLanguageRepository = $countryLanguageRepository;
 	}
 
-
 	/**
 	 * injectCountryRepository
 	 *
@@ -67,7 +66,7 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	public function injectCountryRepository(Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository) {
 		$this->countryRepository = $countryRepository;
 	}
-	
+
 	/**
 	 * action countries
 	 *
@@ -108,7 +107,6 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 		$this->view->assign('sameCountries', $this->countryLanguageRepository->findByFlag($countryLanguage->getFlag()));
 		$this->view->assign('countries', $countries);
 	}
-
 
 }
 ?>
