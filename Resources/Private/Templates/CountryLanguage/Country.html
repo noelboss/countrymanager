@@ -1,9 +1,10 @@
 <f:layout name="Default" />
 
 <f:section name="main">
+<f:debug>{currentCountry.country}</f:debug>
 <div class="btn-group pull-right {currentCountry.flag}">
 	<a class="btn btn-inverse" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="61" />">
-		{currentCountry.country}
+		{currentCountry.country.cn_short_en}
 	</a>
 	<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="61" />">
 		<span class="caret"></span>

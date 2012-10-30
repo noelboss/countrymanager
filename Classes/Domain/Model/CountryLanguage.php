@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Noel Bossart <n.company at me dot com>, noelboss.ch
+ *  (c) 2012 Noel Bossart <n.company at me dot com>, www.noelboss.ch
  *  
  *  All rights reserved
  *
@@ -27,13 +27,14 @@
 /**
  *
  *
- * @package nbocountrylanguage
+ * @package countrymanager
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
 class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
+	 * Country Backend Label
 	 * Flag
 	 *
 	 * @var string
@@ -42,7 +43,6 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	protected $flag;
 
 	/**
-	 * Country Backend Label
 	 *
 	 * @var string
 	 * @validate NotEmpty
@@ -113,7 +113,7 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	/**
 	 * Returns the language
 	 *
-	 * @return string language
+	 * @return string $language
 	 */
 	public function getLanguage() {
 		return $this->language;
@@ -123,7 +123,7 @@ class Tx_Countrymanager_Domain_Model_CountryLanguage extends Tx_Extbase_DomainOb
 	 * Sets the language
 	 *
 	 * @param string $language
-	 * @return string language
+	 * @return void
 	 */
 	public function setLanguage($language) {
 		$this->language = $language;

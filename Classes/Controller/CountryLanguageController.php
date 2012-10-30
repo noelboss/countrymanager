@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Noel Bossart <n.company at me dot com>, noelboss.ch
+ *  (c) 2012 Noel Bossart <n.company at me dot com>, www.noelboss.ch
  *  
  *  All rights reserved
  *
@@ -27,18 +27,11 @@
 /**
  *
  *
- * @package nbocountrylanguage
+ * @package countrymanager
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
 class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_MVC_Controller_ActionController {
-
-	/**
-	 * countryRepository
-	 *
-	 * @var Tx_Countrymanager_Domain_Repository_CountryRepository
-	 */
-	protected $countryRepository;
 
 	/**
 	 * countryLanguageRepository
@@ -54,18 +47,37 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	 * @return void
 	 */
 	public function injectCountryLanguageRepository(Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository) {
-		$this->$countryLanguageRepository = $countryLanguageRepository;
+		$this->countryLanguageRepository = $countryLanguageRepository;
 	}
 
-	/**
-	 * injectCountryRepository
-	 *
-	 * @param Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository
-	 * @return void
-	 */
-	public function injectCountryRepository(Tx_Countrymanager_Domain_Repository_CountryRepository $countryRepository) {
-		$this->countryRepository = $countryRepository;
-	}
+	///**
+	// * action countries
+	// *
+	// * @return void
+	// */
+	//public function countriesAction() {
+    //
+	//}
+    //
+	///**
+	// * action languages
+	// *
+	// * @return void
+	// */
+	//public function languagesAction() {
+    //
+	//}
+    //
+	///**
+	// * action country
+	// *
+	// * @return void
+	// */
+	//public function countryAction() {
+    //
+	//}
+
+
 
 	/**
 	 * action countries

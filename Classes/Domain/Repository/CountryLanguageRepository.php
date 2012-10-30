@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Noel Bossart <n.company at me dot com>, noelboss.ch
+ *  (c) 2012 Noel Bossart <n.company at me dot com>, www.noelboss.ch
  *  
  *  All rights reserved
  *
@@ -27,7 +27,7 @@
 /**
  *
  *
- * @package nbocountrylanguage
+ * @package countrymanager
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */

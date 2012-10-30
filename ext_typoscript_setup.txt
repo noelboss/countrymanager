@@ -13,6 +13,11 @@ config.tx_extbase{
                 mapping {
                     tableName = static_countries
                     recordType = Tx_Countrymanager_Country
+                    columns {
+                        cn_short_en.mapOnProperty = cnshorten
+                        cn_short_local.mapOnProperty = cnshortlocal
+                        cn_tldomain.mapOnProperty = cntldomain
+                    }
                 }
             }
             Tx_Countrymanager_Domain_Model_Langague {
@@ -22,6 +27,6 @@ config.tx_extbase{
                 }
             }
             
-    	}
+        }
     }
 }

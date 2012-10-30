@@ -33,5 +33,95 @@
  */
 class Tx_Countrymanager_Domain_Model_Country extends Tx_Extbase_DomainObject_AbstractEntity {
 
+
+	/**
+	 * Country Backend Label
+	 * cnshorten
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $cnshorten;
+	
+
+	/**
+	 * Returns the cnshorten
+	 *
+	 * @return string $cnshorten
+	 */
+	public function getCnshorten() {
+		return $this->cnshorten;
+	}
+
+	/**
+	 * Sets the cnshorten
+	 *
+	 * @param string $cnshorten
+	 * @return void
+	 */
+	public function setCnShortEn($cnshorten) {
+		$this->cnshorten = $cnshorten;
+	}
+	
+	
+	/**
+	 * Country Backend Label
+	 * cnshortlocal
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $cnshortlocal;
+	
+
+	/**
+	 * Returns the cnshortlocal
+	 *
+	 * @return string $cnshortlocal
+	 */
+	public function getCnshortlocal() {
+		return $this->cnshortlocal;
+	}
+
+	/**
+	 * Sets the cnshortlocal
+	 *
+	 * @param string $cnshortlocal
+	 * @return void
+	 */
+	public function setCnshortlocal($cnshortlocal) {
+		$this->cnshortlocal = $cnshortlocal;
+	}
+
+
+	/**
+	 * Country Backend Label
+	 * cntldomain
+	 *
+	 * @var string
+	 * @validate NotEmpty
+	 */
+	protected $cntldomain;
+	
+
+	/**
+	 * Returns the cntldomain
+	 *
+	 * @return string $cntldomain
+	 */
+	public function getCntldomain() {
+		return $this->cntldomain;
+	}
+
+	/**
+	 * Sets the cntldomain
+	 *
+	 * @param string $cntldomain
+	 * @return void
+	 */
+	public function setCntldomain($cntldomain) {
+		$this->cntldomain = $cntldomain;
+	}
+
 }
 ?>
