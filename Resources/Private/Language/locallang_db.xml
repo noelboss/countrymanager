@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'countrymanager'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_countrymanager_domain_model_countrylanguage">Country Language</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.title">Country Backend Label</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.menulabel">Menulabel</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.country">Country</label>
+			<label index="sys_language.tx_extbase_type.Tx_Countrymanager_CountryLanguage">Typo3 Country Manager CountryLanguage</label>
+		</languageKey>
+	</data>
+</T3locallang>

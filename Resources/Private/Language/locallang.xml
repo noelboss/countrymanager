@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Typo3 Country Manager extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_countrymanager_domain_model_countrylanguage">Country</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.title">Country Backend Label</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.language">Language</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.menulabel">Country Menu Label</label>
+			<label index="tx_countrymanager_domain_model_countrylanguage.country">Country</label>
+		</languageKey>
+	</data>
+</T3locallang>

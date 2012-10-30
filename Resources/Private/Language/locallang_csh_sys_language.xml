@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Context Sensitive Help (CSH) for table sys_language</description>
+		<type>CSH</type>
+		<csh_table>sys_language</csh_table>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title.description">Country Backend Label</label>
+			<label index="language.description">Language</label>
+			<label index="menulabel.description">Country Menu Label</label>
+			<label index="country.description">Country</label>
+		</languageKey>
+	</data>
+</T3locallang>

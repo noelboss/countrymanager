@@ -1,0 +1,26 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+            Tx_Countrymanager_Domain_Model_CountryLanguage {
+                mapping {
+                    tableName = sys_language
+                    recordType = Tx_Countrymanager_CountryLanguage
+                }
+            }
+            Tx_Countrymanager_Domain_Model_Country {
+                mapping {
+                    tableName = static_countries
+                    recordType = Tx_Countrymanager_Country
+                }
+            }
+            Tx_Countrymanager_Domain_Model_Langague {
+                mapping {
+                    tableName = static_languages
+                    recordType = Tx_Countrymanager_Language
+                }
+            }
+            
+    	}
+    }
+}
