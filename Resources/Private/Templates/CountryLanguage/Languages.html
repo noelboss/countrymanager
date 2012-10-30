@@ -1,5 +1,22 @@
 <f:layout name="Default" />
 
 <f:section name="main">
-All Languages
+<div class="btn-group pull-right {currentCountry.flag}">
+	<a class="btn btn-inverse" href="#">
+		Languages
+	</a>
+	<button class="btn dropdown-toggle btn-inverse" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		<f:groupedFor each="{countries}" as="country" groupBy="language" groupKey="language">
+			<li>
+				<a data-toggle="dropdown" href="<f:uri.page additionalParams="{L: currentCountry.uid}" />">
+					{language.lgnamelocal}
+				</a>
+			</li>
+		</f:groupedFor>
+	</ul>
+</div>
+
 </f:section>

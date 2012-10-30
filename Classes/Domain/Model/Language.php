@@ -34,18 +34,25 @@
 class Tx_Countrymanager_Domain_Model_Language extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
-	 * lgnameen
+	 * Language in English
 	 *
 	 * @var string
 	 */
 	protected $lgnameen;
 
 	/**
-	 * lgiso
+	 * Language ISO Code
 	 *
 	 * @var string
 	 */
 	protected $lgiso;
+
+	/**
+	 * Language in Local Language
+	 *
+	 * @var string
+	 */
+	protected $lgnamelocal;
 
 	/**
 	 * Returns the lgnameen
@@ -83,6 +90,25 @@ class Tx_Countrymanager_Domain_Model_Language extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function setLgiso($lgiso) {
 		$this->lgiso = $lgiso;
+	}
+
+	/**
+	 * Returns the lgnamelocal
+	 *
+	 * @return string $lgnamelocal
+	 */
+	public function getLgnamelocal() {
+		return $this->lgnamelocal;
+	}
+
+	/**
+	 * Sets the lgnamelocal
+	 *
+	 * @param string $lgnamelocal
+	 * @return void
+	 */
+	public function setLgnamelocal($lgnamelocal) {
+		$this->lgnamelocal = $lgnamelocal;
 	}
 
 }

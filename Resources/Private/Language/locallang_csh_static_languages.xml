@@ -8,6 +8,7 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="lgnameen.description">lgnameen</label>
+			<label index="lgnamelocal.description">Language in Local Language</label>
 			<label index="lgiso.description">lgiso</label>
 		</languageKey>
 	</data>

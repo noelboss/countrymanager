@@ -49,33 +49,24 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	public function injectCountryLanguageRepository(Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository) {
 		$this->countryLanguageRepository = $countryLanguageRepository;
 	}
+	
 
-	///**
-	// * action countries
-	// *
-	// * @return void
-	// */
-	//public function countriesAction() {
-    //
-	//}
-    //
-	///**
-	// * action languages
-	// *
-	// * @return void
-	// */
-	//public function languagesAction() {
-    //
-	//}
-    //
-	///**
-	// * action country
-	// *
-	// * @return void
-	// */
-	//public function countryAction() {
-    //
-	//}
+	/**
+	 * languageRepository
+	 *
+	 * @var Tx_Countrymanager_Domain_Repository_LanguageRepository
+	 */
+	protected $languageRepository;
+
+	/**
+	 * injectCountryLanguageRepository
+	 *
+	 * @param Tx_Countrymanager_Domain_Repository_LanguageRepository $languageRepository
+	 * @return void
+	 */
+	public function injectLanguageRepository(Tx_Countrymanager_Domain_Repository_LanguageRepository $languageRepository) {
+		$this->languageRepository = $languageRepository;
+	}
 	
 	/**
 	 * action countries
@@ -112,11 +103,8 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	 */
 	public function languagesAction() {
 		$countries = $this->countryLanguageRepository->findAll();
-		$countryLanguage = $this->countryLanguageRepository->findByUid($GLOBALS['TSFE']->sys_language_uid);
-
-		$this->view->assign('currentCountry', $countryLanguage);
-		$this->view->assign('sameCountries', $this->countryLanguageRepository->findByFlag($countryLanguage->getFlag()));
 		$this->view->assign('countries', $countries);
+
 	}
 
 }

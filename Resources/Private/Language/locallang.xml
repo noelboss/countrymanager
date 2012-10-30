@@ -18,6 +18,7 @@
 			<label index="tx_countrymanager_domain_model_country.cntldomain">cntldomain</label>
 			<label index="tx_countrymanager_domain_model_language">Language</label>
 			<label index="tx_countrymanager_domain_model_language.lgnameen">lgnameen</label>
+			<label index="tx_countrymanager_domain_model_language.lgnamelocal">Language in Local Language</label>
 			<label index="tx_countrymanager_domain_model_language.lgiso">lgiso</label>
 		</languageKey>
 	</data>

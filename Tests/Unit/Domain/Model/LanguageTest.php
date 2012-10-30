@@ -70,6 +70,23 @@ class Tx_Countrymanager_Domain_Model_LanguageTest extends Tx_Extbase_Tests_Unit_
 	/**
 	 * @test
 	 */
+	public function getLgnamelocalReturnsInitialValueForString() { }
+
+	/**
+	 * @test
+	 */
+	public function setLgnamelocalForStringSetsLgnamelocal() { 
+		$this->fixture->setLgnamelocal('Conceived at T3CON10');
+
+		$this->assertSame(
+			'Conceived at T3CON10',
+			$this->fixture->getLgnamelocal()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
 	public function getLgisoReturnsInitialValueForString() { }
 
 	/**
