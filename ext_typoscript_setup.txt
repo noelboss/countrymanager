@@ -24,6 +24,9 @@ config.tx_extbase{
                 mapping {
                     tableName = static_languages
                     recordType = Tx_Countrymanager_Language
+                    columns {
+                        lg_name_en.mapOnProperty = lgnameen
+                    }
                 }
             }
             

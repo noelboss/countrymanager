@@ -1,10 +1,9 @@
 <f:layout name="Default" />
 
 <f:section name="main">
-<f:debug>{currentCountry.country}</f:debug>
 <div class="btn-group pull-right {currentCountry.flag}">
 	<a class="btn btn-inverse" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="61" />">
-		{currentCountry.country.cn_short_en}
+		{currentCountry.country.cnshortlocal}
 	</a>
 	<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="61" />">
 		<span class="caret"></span>
@@ -13,7 +12,7 @@
 		<f:for each="{sameCountries}" as="countryLanguage" iteration="langIter">
 			<f:if condition="{countryLanguage.uid} != {currentCountry.uid}">
 				<f:if condition="{countryLanguage.uid -> f:cObject(typoscriptObjectPath: 'module.NavLanguageLink')}">
-					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage.uid}">{countryLanguage.language}</f:link.page></li>
+					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage.uid}">{countryLanguage.language.lg_name_en}</f:link.page></li>
 				</f:if>
 			</f:if>
 		</f:for>
