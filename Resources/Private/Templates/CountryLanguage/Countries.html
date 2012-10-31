@@ -1,7 +1,7 @@
 <f:layout name="Default" />
 
 <f:section name="main">
-<div class="btn-group pull-right">
+<div class="btn-group">
 	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 		{currentCountry.menulabel}
 		<span class="caret"></span>
@@ -9,17 +9,15 @@
 	<ul class="dropdown-menu">
 	<f:groupedFor each="{countries}" as="country" groupBy="country">
 		<f:for each="{country}" as="countryLanguage" iteration="langIter">
-			<f:if condition="{countryLanguage.country} != {currentCountry.country}">
-				<f:if condition="{langIter.isFirst}">
-					<li class="{countryLanguage.flag}<f:if condition="{langIter.total} > 1"> dropdown-submenu</f:if>">
-						<f:link.page additionalParams="{L: countryLanguage}" pageUid="{settings.rootUid}">{countryLanguage.country.cnshorten}</f:link.page>
-						<ul class="dropdown-menu">
-				</f:if>
-					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage}" pageUid="{settings.rootUid}">{countryLanguage.language.lgnamelocal}</f:link.page></li>
-				<f:if condition="{langIter.isLast}">
-						</ul>
-					</li>
-				</f:if>
+			<f:if condition="{langIter.isFirst}">
+				<li class="<f:if condition="{countryLanguage.country} == {currentCountry.country}">active </f:if>cn-{countryLanguage.country.cntldomain}<f:if condition="{langIter.total} > 1"> dropdown-submenu</f:if>">
+					<f:link.page additionalParams="{L: countryLanguage}" pageUid="{settings.rootUid}">{countryLanguage.country.cnshorten}</f:link.page>
+					<ul class="dropdown-menu">
+			</f:if>
+				<li class="lg-{countryLanguage.language.lgiso}<f:if condition="{countryLanguage.language} == {currentCountry.language}"> active</f:if>"><f:link.page additionalParams="{L: countryLanguage}" pageUid="{settings.rootUid}">{countryLanguage.language.lgnamelocal}</f:link.page></li>
+			<f:if condition="{langIter.isLast}">
+					</ul>
+				</li>
 			</f:if>
 		</f:for>
 	</f:groupedFor>
