@@ -21,7 +21,9 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 	'Display list of languages'
 );
 
-t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Typo3 Country Manager');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/ExtensionConfiguration', 'Typo3 Country Manager – Extension Configuration');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/AutomaticLanguageConfiguration', 'Typo3 Country Manager – Automatic Language Configuration');
+
 $tmp_countrymanager_columns = array(
 	'title' => array(
 		'exclude' => 1,
