@@ -8,7 +8,20 @@ plugin.tx_countrymanager {
 		layoutRootPath = EXT:countrymanager/Resources/Private/Layouts/
 	}
 	persistence {
-		# cat=plugin.tx_countrymanager//a; type=string; label=Default storage PID
+		# cat=plugin.tx_countrymanager//a; type=integer; label=Default storage PID
 		storagePid = 0
+	}
+	settings {
+		# Used to define default Language
+		# cat=plugin.tx_countrymanager//b; type=integer; label=Default Country UID: ID of the sys_language record. Don't use 0!
+		defaultCountryUid = 1
+		
+		# content_fallback || strict
+		# cat=plugin.tx_countrymanager//b; type=string; label=Language Mode: content_fallback or strict
+		sys_language_mode = content_fallback
+		
+		# hideNonTranslated
+		# cat=plugin.tx_countrymanager//a; type=string; label=Overlay Mode: 1 or hideNonTranslated.
+		sys_language_overlay = hideNonTranslated
 	}
 }

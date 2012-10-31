@@ -1,0 +1,104 @@
+config {
+	sys_language_mode = content_fallback; 8,1,3,2,4,5,6,7,
+}
+
+config {
+	sys_language_uid = 1
+	language = de
+	htmlTag_langKey = de
+	locale_all = ch_DE.UTF-8
+}
+
+####################################
+# COUNTRY: Australia / Australia
+####################################
+# German / Deutsch
+	[globalVar= GP:L=8] 
+	config {
+		sys_language_uid = 8
+		language = de
+		htmlTag_langKey = de
+		locale_all = at_DE.UTF-8
+	}
+	[global]
+
+####################################
+# COUNTRY: Switzerland / Schweiz
+####################################
+# German / Deutsch
+	[globalVar= GP:L=1] 
+	config {
+		sys_language_uid = 1
+		language = de
+		htmlTag_langKey = de
+		locale_all = ch_DE.UTF-8
+	}
+	[global]
+# English / English
+	[globalVar= GP:L=3] 
+	config {
+		sys_language_uid = 3
+		language = en
+		htmlTag_langKey = en
+		locale_all = ch_EN.UTF-8
+	}
+	[global]
+# French / Français
+	[globalVar= GP:L=2] 
+	config {
+		sys_language_uid = 2
+		language = fr
+		htmlTag_langKey = fr
+		locale_all = ch_FR.UTF-8
+	}
+	[global]
+
+####################################
+# COUNTRY: Germany / Deutschland
+####################################
+# German / Deutsch
+	[globalVar= GP:L=4] 
+	config {
+		sys_language_uid = 4
+		language = de
+		htmlTag_langKey = de
+		locale_all = de_DE.UTF-8
+	}
+	[global]
+# English / English
+	[globalVar= GP:L=5] 
+	config {
+		sys_language_uid = 5
+		language = en
+		htmlTag_langKey = en
+		locale_all = de_EN.UTF-8
+	}
+	[global]
+
+####################################
+# COUNTRY: France / France
+####################################
+# French / Français
+	[globalVar= GP:L=6] 
+	config {
+		sys_language_uid = 6
+		language = fr
+		htmlTag_langKey = fr
+		locale_all = fr_FR.UTF-8
+	}
+	[global]
+
+####################################
+# COUNTRY: United States / United States
+####################################
+# English / English
+	[globalVar= GP:L=7] 
+	config {
+		sys_language_uid = 7
+		language = en
+		htmlTag_langKey = en
+		locale_all = us_EN.UTF-8
+	}
+	[global]
+
+						

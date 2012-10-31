@@ -11,4 +11,23 @@ plugin.tx_countrymanager {
 		# uncomment the following line to enable the new Property Mapper.
 		# rewrittenPropertyMapper = 1
 	}
+	settings {
+		defaultCountryUid = {$plugin.tx_countrymanager.settings.defaultCountryUid}
+		sys_language_mode = {$plugin.tx_countrymanager.settings.sys_language_mode}
+		sys_language_overlay = {$plugin.tx_countrymanager.settings.sys_language_overlay}
+	}
 }
+
+# Basic Language Configuration
+config {
+	# sys_language_mode is generated dynamically by backend module
+
+	# Zeigt nicht übersetzte inhalte nicht an auf der Sprache
+	sys_language_overlay = {$plugin.tx_countrymanager.settings.sys_language_overlay}
+	
+	# Add L Parameter to URL
+	linkVars := addToList(L)
+}
+
+# Needed for Backend Module
+module.tx_countrymanager.settings < plugin.tx_countrymanager.settings

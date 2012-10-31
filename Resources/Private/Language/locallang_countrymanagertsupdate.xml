@@ -6,9 +6,9 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-		<label index="mlang_tabs_tab">County Manager</label>
-			<label index="mlang_labels_tabdescr">Automatically Update Language TypoScript</label>
-			<label index="mlang_labels_tablabel">Country Manager</label>
+		<label index="mlang_tabs_tab">Country Manager</label>
+			<label index="mlang_labels_tabdescr">Automatically update language TypoScript</label>
+			<label index="mlang_labels_tablabel">Updated Languages Manager</label>
 		</languageKey>
 	</data>
 </T3locallang>

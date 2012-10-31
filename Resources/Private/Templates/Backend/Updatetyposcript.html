@@ -1,41 +1,65 @@
 <f:layout name="Default" />
 
 <f:section name="main">
-<h1>Language Overview</h1>
-<p>TypoScript Setup</p>
-<!--
 
-# Default language, sys_language.uid = 1
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div id="typo3-docheader-row1">
+				<div class="buttonsleft">
+
+				</div>
+				<div class="buttonsright">
+					<f:be.buttons.shortcut />
+				</div>
+			</div>
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody" style="padding: 1em;">
+				<f:be.container 
+					loadExtJs="false" 
+					enableExtJsDebug="false">
+					<h2>Country Manager</h2>
+					<f:renderFlashMessages renderMode="div" />
+					<h3>Automatically generated TypoScript setup:</h3>
+					<f:form>
+						<textarea cols="70" rows="25" style="width: 100%;" name="tx_countrymanager_tools_countrymanagercountrymanagertsupdate[config]">
 config {
-	sys_language_uid = 1
-	language = de
-	htmlTag_langKey = de
-	locale_all = de_CH.UTF-8
-	language_alt = en
+	<f:if condition="{content_fallback}">
+	<f:then>sys_language_mode = content_fallback; <f:if condition="{defaultCountry}">{defaultCountry.uid},</f:if><f:for each="{countries}" as="country" iteration="langIter"><f:if condition="{defaultCountry.uid} != {country.uid}">{country.uid}<f:if condition="{langIter.isLast} < 1">,</f:if></f:if></f:for></f:then>
+	<f:else>sys_language_mode = strict</f:else>
+	</f:if>
 }
-
-[globalVar= GP:L=1] || [globalString=IENV:HTTP_HOST=*.ch] && [globalVar = GP:L=]
+<f:if condition="{defaultCountry}">
 config {
-	sys_language_uid = 1
-}
-[global]
-
-
--->
-<f:debug>{countries}</f:debug>
-
-<textarea style="width: 100%; height: 300px;">
+	sys_language_uid = {defaultCountry.uid}
+	language = {defaultCountry.language.lgiso}
+	htmlTag_langKey = {defaultCountry.language.lgiso}
+	locale_all = {defaultCountry.flag}_{defaultCountry.language.lgisoupper}.UTF-8
+}</f:if>
 <f:groupedFor each="{countries}" as="country" groupBy="country">
-	<f:for each="{country}" as="countryLanguage" iteration="langIter">
-[globalVar= GP:L={countryLanguage.uid}] <f:if condition="{countryLanguage.urlmapping}">|| [globalString=IENV:HTTP_HOST={countryLanguage.urlmapping}] && [globalVar = GP:L=]</f:if>
-config {
-	sys_language_uid = {countryLanguage.uid}
-	language = {countryLanguage.language.lgiso}
-	htmlTag_langKey = {countryLanguage.language.lgiso}
-	locale_all = {countryLanguage.flag}_{countryLanguage.language.lgisoupper}.UTF-8
-}
-[global]
-	</f:for>
+<f:for each="{country}" as="countryLanguage" iteration="langIter"><f:if condition="{langIter.isFirst}">####################################
+# COUNTRY: {countryLanguage.country.cnshorten} / {countryLanguage.country.cnshortlocal}
+####################################</f:if>
+# {countryLanguage.language.lgnameen} / {countryLanguage.language.lgnamelocal}
+	[globalVar= GP:L={countryLanguage.uid}] <f:if condition="{countryLanguage.urlmapping}">|| [globalString=IENV:HTTP_HOST={countryLanguage.urlmapping}] && [globalVar = GP:L=]</f:if>
+	config {
+		sys_language_uid = {countryLanguage.uid}
+		language = {countryLanguage.language.lgiso}
+		htmlTag_langKey = {countryLanguage.language.lgiso}
+		locale_all = {countryLanguage.flag}_{countryLanguage.language.lgisoupper}.UTF-8
+	}
+	[global]</f:for>
 </f:groupedFor>
-</textarea>
+						</textarea>
+						<p style="padding:1em 0;">
+							<f:form.submit name="mySubmit" value="Update Configuration" />
+						</p>
+					</f:form>
+					<p style="padding:1em 0;">
+						&copy; <a href="http://www.noelboss.ch" target="_blank">www.noelboss.ch</a>
+					</p>
+				</f:be.container>
+			</div>
+		</div>
+	</div>
 </f:section>

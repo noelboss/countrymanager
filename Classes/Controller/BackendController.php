@@ -66,6 +66,20 @@ class Tx_Countrymanager_Controller_BackendController extends Tx_Extbase_MVC_Cont
 	public function injectLanguageRepository(Tx_Countrymanager_Domain_Repository_LanguageRepository $languageRepository) {
 		$this->languageRepository = $languageRepository;
 	}
+	
+	public function initializeAction() {
+        if(TYPO3_MODE === 'BE') {
+            $configurationManager = t3lib_div::makeInstance('Tx_Extbase_Configuration_BackendConfigurationManager');
+            $settings = $configurationManager->getConfiguration(
+                $this->request->getControllerExtensionName(),
+                $this->request->getPluginName()
+            );
+			$this->settings = $settings['settings'];
+        }
+		else {
+			die('No Access Outside BE!');
+		}
+    }
 
 	/**
 	 * action updatetyposcript
@@ -73,8 +87,24 @@ class Tx_Countrymanager_Controller_BackendController extends Tx_Extbase_MVC_Cont
 	 * @return void
 	 */
 	public function updatetyposcriptAction() {
+		$args = $this->request->getArguments();
+		if(isset($args['config'])){
+			$tsfile = PATH_site."typo3conf/ext/countrymanager/Configuration/TypoScript/AutomaticLanguageConfiguration/setup.txt";
+			if(t3lib_div::writeFile( $tsfile , $args['config'])){
+				$this->flashMessages->add('TypoScript successfully writen written. Make sure to add the static TS template "Typo3 Country Manager – Automatic Language Configuration" to your master-template.');
+			} else {
+				$this->flashMessages->add('TypoScript could not be written.');
+			}
+			;
+		}
+		
 		$countries = $this->countryLanguageRepository->findAll();
+		$this->view->assign('content_fallback', $this->settings['sys_language_mode'] == 'content_fallback' ? true : false);
+		if(isset($this->settings['defaultCountryUid'])){
+			$this->view->assign('defaultCountry', $this->countryLanguageRepository->findByUid(intval($this->settings['defaultCountryUid'])));
+		}
 		$this->view->assign('countries', $countries);
+		//$this->view->assign('debug', $countries);
 	}
 
 }
