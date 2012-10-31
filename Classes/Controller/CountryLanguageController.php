@@ -100,7 +100,9 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	 */
 	public function languagesAction() {
 		$countries = $this->countryLanguageRepository->findAll();
-		$this->view->assign('countries', $countries);
+		$countryLanguage = $this->countryLanguageRepository->findByUid($GLOBALS['TSFE']->sys_language_uid);
+		$this->view->assign('currentCountry', $countryLanguage);
+		$this->view->assign('sameCountries', $this->countryLanguageRepository->findByFlag($countryLanguage->getFlag()));
 		$this->view->assign('settings', $this->settings);
 	}
 

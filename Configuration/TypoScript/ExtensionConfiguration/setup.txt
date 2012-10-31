@@ -30,5 +30,38 @@ config {
 	linkVars := addToList(L)
 }
 
+plugin.tx_countrymanager.languageExists = HMENU
+plugin.tx_countrymanager.languageExists {
+	noBlur = 1
+	special = language
+	special.value.stdWrap.current = 1
+	special.normalWhenNoLanguage = 0
+	
+	addQueryString = true
+	addQueryString {
+		method = GET,POST
+		exclude = cHash
+	}
+	
+	1 = TMENU
+	1 {      
+		noBlur = 1 
+		
+		NO {
+			doNotLinkIt = 1
+		}  
+		# don't display not translated Pages:  
+		#USERDEF1 < .NO 
+		USERDEF1 = 1
+		USERDEF1 {
+			doNotLinkIt = 1
+			stdWrap.cObject = TEXT
+			stdWrap.cObject {
+				value =   
+			}
+		}  
+	}
+}
+
 # Needed for Backend Module
 module.tx_countrymanager.settings < plugin.tx_countrymanager.settings

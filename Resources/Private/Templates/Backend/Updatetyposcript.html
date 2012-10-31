@@ -38,7 +38,7 @@ config {
 }</f:if>
 <f:groupedFor each="{countries}" as="country" groupBy="country">
 <f:for each="{country}" as="countryLanguage" iteration="langIter"><f:if condition="{langIter.isFirst}">####################################
-# COUNTRY: {countryLanguage.country.cnshorten} / {countryLanguage.country.cnshortlocal}
+# {countryLanguage.country.cnshorten} / {countryLanguage.country.cnshortlocal}
 ####################################</f:if>
 # {countryLanguage.language.lgnameen} / {countryLanguage.language.lgnamelocal}
 	[globalVar= GP:L={countryLanguage.uid}] <f:if condition="{countryLanguage.urlmapping}">|| [globalString=IENV:HTTP_HOST={countryLanguage.urlmapping}] && [globalVar = GP:L=]</f:if>
