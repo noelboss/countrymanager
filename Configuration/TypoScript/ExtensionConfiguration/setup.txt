@@ -9,6 +9,6 @@ plugin.tx_countrymanager {
 	}
 	features {
 		# uncomment the following line to enable the new Property Mapper.
-		rewrittenPropertyMapper = 1
+		# rewrittenPropertyMapper = 1
 	}
 }

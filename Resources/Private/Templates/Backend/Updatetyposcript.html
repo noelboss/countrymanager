@@ -1,0 +1,41 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>Language Overview</h1>
+<p>TypoScript Setup</p>
+<!--
+
+# Default language, sys_language.uid = 1
+config {
+	sys_language_uid = 1
+	language = de
+	htmlTag_langKey = de
+	locale_all = de_CH.UTF-8
+	language_alt = en
+}
+
+[globalVar= GP:L=1] || [globalString=IENV:HTTP_HOST=*.ch] && [globalVar = GP:L=]
+config {
+	sys_language_uid = 1
+}
+[global]
+
+
+-->
+<f:debug>{countries}</f:debug>
+
+<textarea style="width: 100%; height: 300px;">
+<f:groupedFor each="{countries}" as="country" groupBy="country">
+	<f:for each="{country}" as="countryLanguage" iteration="langIter">
+[globalVar= GP:L={countryLanguage.uid}] <f:if condition="{countryLanguage.urlmapping}">|| [globalString=IENV:HTTP_HOST={countryLanguage.urlmapping}] && [globalVar = GP:L=]</f:if>
+config {
+	sys_language_uid = {countryLanguage.uid}
+	language = {countryLanguage.language.lgiso}
+	htmlTag_langKey = {countryLanguage.language.lgiso}
+	locale_all = {countryLanguage.flag}_{countryLanguage.language.lgisoupper}.UTF-8
+}
+[global]
+	</f:for>
+</f:groupedFor>
+</textarea>
+</f:section>

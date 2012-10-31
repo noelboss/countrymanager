@@ -41,6 +41,13 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	protected $countryLanguageRepository;
 
 	/**
+	 * languageRepository
+	 *
+	 * @var Tx_Countrymanager_Domain_Repository_LanguageRepository
+	 */
+	protected $languageRepository;
+
+	/**
 	 * injectCountryLanguageRepository
 	 *
 	 * @param Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository
@@ -49,14 +56,6 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	public function injectCountryLanguageRepository(Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository) {
 		$this->countryLanguageRepository = $countryLanguageRepository;
 	}
-	
-
-	/**
-	 * languageRepository
-	 *
-	 * @var Tx_Countrymanager_Domain_Repository_LanguageRepository
-	 */
-	protected $languageRepository;
 
 	/**
 	 * injectCountryLanguageRepository
@@ -67,12 +66,11 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	public function injectLanguageRepository(Tx_Countrymanager_Domain_Repository_LanguageRepository $languageRepository) {
 		$this->languageRepository = $languageRepository;
 	}
-	
+
 	/**
 	 * action countries
 	 *
 	 * @return void
-	 * @param Tx_CountryLanguagemanager_Domain_Model_CountryLanguageLanguage
 	 */
 	public function countriesAction() {
 		$countries = $this->countryLanguageRepository->findAll();
@@ -87,7 +85,6 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	 * action country
 	 *
 	 * @return void
-	 * @param Tx_CountryLanguagemanager_Domain_Model_CountryLanguageLanguage
 	 */
 	public function countryAction() {
 		$countryLanguage = $this->countryLanguageRepository->findByUid($GLOBALS['TSFE']->sys_language_uid);
@@ -99,13 +96,12 @@ class Tx_Countrymanager_Controller_CountryLanguageController extends Tx_Extbase_
 	 * action languages
 	 *
 	 * @return void
-	 * @param Tx_CountryLanguagemanager_Domain_Model_CountryLanguageLanguage
 	 */
 	public function languagesAction() {
 		$countries = $this->countryLanguageRepository->findAll();
 		$this->view->assign('countries', $countries);
-
 	}
+
 
 }
 ?>

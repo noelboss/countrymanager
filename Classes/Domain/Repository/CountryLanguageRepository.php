@@ -32,6 +32,13 @@
  *
  */
 class Tx_Countrymanager_Domain_Repository_CountryLanguageRepository extends Tx_Extbase_Persistence_Repository {
-
+	protected $defaultOrderings = array(
+		'title' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING,
+		'uid' => Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING
+	);
+	public function initializeObject() {
+		$this->defaultQuerySettings = $this->objectManager->create('Tx_Extbase_Persistence_Typo3QuerySettings');
+		$this->defaultQuerySettings->setRespectStoragePage(FALSE);
+	}
 }
 ?>

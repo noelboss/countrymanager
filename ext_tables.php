@@ -21,8 +21,31 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 	'Display list of languages'
 );
 
+
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/ExtensionConfiguration', 'Typo3 Country Manager – Extension Configuration');
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/AutomaticLanguageConfiguration', 'Typo3 Country Manager – Automatic Language Configuration');
+
+if (TYPO3_MODE === 'BE') {
+	/**
+	 * Registers a Backend Module
+	 */
+	Tx_Extbase_Utility_Extension::registerModule(
+		$_EXTKEY,
+		'tools',	 // Make module a submodule of 'tools'
+		'countrymanagertsupdate',	// Submodule key
+		'',						// Position
+		array(
+			'Backend' => 'updatetyposcript',
+			
+		),
+		array(
+			'access' => 'user,group',
+			'icon'   => 'EXT:' . $_EXTKEY . '/ext_icon.gif',
+			'labels' => 'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_countrymanagertsupdate.xml',
+		)
+	);
+}
+
 
 $tmp_countrymanager_columns = array(
 	'title' => array(

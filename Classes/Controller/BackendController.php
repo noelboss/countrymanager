@@ -31,93 +31,50 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Tx_Countrymanager_Domain_Model_Language extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_Countrymanager_Controller_BackendController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * Language in English
+	 * countryLanguageRepository
 	 *
-	 * @var string
+	 * @var Tx_Countrymanager_Domain_Repository_CountryLanguageRepository
 	 */
-	protected $lgnameen;
+	protected $countryLanguageRepository;
 
 	/**
-	 * Language in Local Language
+	 * languageRepository
 	 *
-	 * @var string
+	 * @var Tx_Countrymanager_Domain_Repository_LanguageRepository
 	 */
-	protected $lgnamelocal;
+	protected $languageRepository;
 
 	/**
-	 * Language ISO Code
+	 * injectCountryLanguageRepository
 	 *
-	 * @var string
-	 */
-	protected $lgiso;
-
-	/**
-	 * Returns the lgnameen
-	 *
-	 * @return string $lgnameen
-	 */
-	public function getLgnameen() {
-		return $this->lgnameen;
-	}
-
-	/**
-	 * Sets the lgnameen
-	 *
-	 * @param string $lgnameen
+	 * @param Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository
 	 * @return void
 	 */
-	public function setLgnameen($lgnameen) {
-		$this->lgnameen = $lgnameen;
+	public function injectCountryLanguageRepository(Tx_Countrymanager_Domain_Repository_CountryLanguageRepository $countryLanguageRepository) {
+		$this->countryLanguageRepository = $countryLanguageRepository;
 	}
 
 	/**
-	 * Returns the lgiso
+	 * injectCountryLanguageRepository
 	 *
-	 * @return string $lgiso
-	 */
-	public function getLgiso() {
-		return strtolower($this->lgiso);
-	}
-	
-	/**
-	 * Returns the lgiso in Uppercase
-	 *
-	 * @return string $lgisoupper
-	 */
-	public function getLgisoupper() {
-		return $this->lgiso;
-	}
-
-	/**
-	 * Sets the lgiso
-	 *
-	 * @param string $lgiso
+	 * @param Tx_Countrymanager_Domain_Repository_LanguageRepository $languageRepository
 	 * @return void
 	 */
-	public function setLgiso($lgiso) {
-		$this->lgiso = $lgiso;
+	public function injectLanguageRepository(Tx_Countrymanager_Domain_Repository_LanguageRepository $languageRepository) {
+		$this->languageRepository = $languageRepository;
 	}
 
 	/**
-	 * Returns the lgnamelocal
+	 * action updatetyposcript
 	 *
-	 * @return string $lgnamelocal
-	 */
-	public function getLgnamelocal() {
-		return $this->lgnamelocal;
-	}
-
-	/**
-	 * Sets the lgnamelocal
-	 *
-	 * @param string $lgnamelocal
 	 * @return void
 	 */
-	public function setLgnamelocal($lgnamelocal) {
-		$this->lgnamelocal = $lgnamelocal;
+	public function updatetyposcriptAction() {
+		$countries = $this->countryLanguageRepository->findAll();
+		$this->view->assign('countries', $countries);
 	}
 
 }

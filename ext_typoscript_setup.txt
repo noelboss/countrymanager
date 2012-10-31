@@ -28,10 +28,10 @@ config.tx_extbase{
 	                columns {
 	                    lg_name_en.mapOnProperty = lgnameen
 	                    lg_name_local.mapOnProperty = lgnamelocal
-	                    lgiso.mapOnProperty = iso
+	                    lg_iso_2.mapOnProperty = lgiso
 	                }
 				}
-            }	
+            }
             
     	}
     }

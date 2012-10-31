@@ -12,10 +12,10 @@
 			<f:if condition="{countryLanguage.country} != {currentCountry.country}">
 				<f:if condition="{langIter.isFirst}">
 					<li class="{countryLanguage.flag}<f:if condition="{langIter.total} > 1"> dropdown-submenu</f:if>">
-						<f:link.page additionalParams="{L: countryLanguage.uid}" pageUid="61">{countryLanguage.country.cnshorten}</f:link.page>
+						<f:link.page additionalParams="{L: countryLanguage}" pageUid="61">{countryLanguage.country.cnshorten}</f:link.page>
 						<ul class="dropdown-menu">
 				</f:if>
-					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage.uid}" pageUid="61">{countryLanguage.language.lgnamelocal}</f:link.page></li>
+					<li class="{countryLanguage.flag}"><f:link.page additionalParams="{L: countryLanguage}" pageUid="61">{countryLanguage.language.lgnamelocal}</f:link.page></li>
 				<f:if condition="{langIter.isLast}">
 						</ul>
 					</li>
