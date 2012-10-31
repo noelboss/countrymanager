@@ -13,8 +13,12 @@ plugin.tx_countrymanager {
 	}
 	settings {
 		# Used to define default Language
-		# cat=plugin.tx_countrymanager//b; type=integer; label=Default Country UID: ID of the sys_language record. Don't use 0!
+		# cat=plugin.tx_countrymanager//b; type=integer; label=Default Country ID: ID of the sys_language record. Don't use 0!
 		defaultCountryUid = 1
+		
+		# Used to define default Language
+		# cat=plugin.tx_countrymanager//b; type=integer; label=Root UD: ID of the root page (Used for Country switch)
+		rootUid = 1
 		
 		# content_fallback || strict
 		# cat=plugin.tx_countrymanager//b; type=string; label=Language Mode: content_fallback or strict

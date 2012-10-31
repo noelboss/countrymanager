@@ -1,38 +1,38 @@
 config.tx_extbase{
-    persistence{
-        classes{
+	persistence{
+		classes{
 
-            Tx_Countrymanager_Domain_Model_CountryLanguage {
-                mapping {
-                    tableName = sys_language
-                    recordType = Tx_Countrymanager_CountryLanguage
-                }
-            }
-            
-            Tx_Countrymanager_Domain_Model_Country {
-                mapping {
-                    tableName = static_countries
-                    recordType = Tx_Countrymanager_Country
-                    columns {
-                        cn_short_en.mapOnProperty = cnshorten
-                        cn_short_local.mapOnProperty = cnshortlocal
-                        cn_tldomain.mapOnProperty = cntldomain
-                    }
-                }
-            }
-            
-            Tx_Countrymanager_Domain_Model_Language {
-                mapping {
-                    tableName = static_languages
-                    recordType = Tx_Countrymanager_Language
-	                columns {
-	                    lg_name_en.mapOnProperty = lgnameen
-	                    lg_name_local.mapOnProperty = lgnamelocal
-	                    lg_iso_2.mapOnProperty = lgiso
-	                }
+			Tx_Countrymanager_Domain_Model_CountryLanguage {
+				mapping {
+					tableName = sys_language
+					recordType = Tx_Countrymanager_CountryLanguage
 				}
-            }
-            
-    	}
-    }
+			}
+			
+			Tx_Countrymanager_Domain_Model_Country {
+				mapping {
+					tableName = static_countries
+					recordType = Tx_Countrymanager_Country
+					columns {
+						cn_short_en.mapOnProperty = cnshorten
+						cn_short_local.mapOnProperty = cnshortlocal
+						cn_tldomain.mapOnProperty = cntldomain
+					}
+				}
+			}
+			
+			Tx_Countrymanager_Domain_Model_Language {
+				mapping {
+					tableName = static_languages
+					recordType = Tx_Countrymanager_Language
+					columns {
+						lg_name_en.mapOnProperty = lgnameen
+						lg_name_local.mapOnProperty = lgnamelocal
+						lg_iso_2.mapOnProperty = lgiso
+					}
+				}
+			}
+			
+		}
+	}
 }

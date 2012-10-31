@@ -12,6 +12,7 @@ plugin.tx_countrymanager {
 		# rewrittenPropertyMapper = 1
 	}
 	settings {
+		rootUid = {$plugin.tx_countrymanager.settings.rootUid}
 		defaultCountryUid = {$plugin.tx_countrymanager.settings.defaultCountryUid}
 		sys_language_mode = {$plugin.tx_countrymanager.settings.sys_language_mode}
 		sys_language_overlay = {$plugin.tx_countrymanager.settings.sys_language_overlay}
@@ -22,7 +23,7 @@ plugin.tx_countrymanager {
 config {
 	# sys_language_mode is generated dynamically by backend module
 
-	# Zeigt nicht übersetzte inhalte nicht an auf der Sprache
+	# Don't display non translated pages
 	sys_language_overlay = {$plugin.tx_countrymanager.settings.sys_language_overlay}
 	
 	# Add L Parameter to URL

@@ -2,12 +2,12 @@
 
 <f:section name="main">
 <div class="btn-group pull-right {currentCountry.flag}">
-	<a class="btn btn-inverse" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="61" />">
+	<a class="btn btn-inverse" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="{settings.rootUid}" />">
 		{currentCountry.country.cnshortlocal}
 	</a>
 	<f:if condition="<f:count>{sameCountries}</f:count> > 1">
 	
-		<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="61" />">
+		<a class="btn dropdown-toggle btn-inverse" data-toggle="dropdown" href="<f:uri.page additionalParams="{L: currentCountry.uid}" pageUid="{settings.rootUid}" />">
 			<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu">
