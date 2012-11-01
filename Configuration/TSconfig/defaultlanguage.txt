@@ -1,9 +1,12 @@
 # This configures sys_language 0
 mod.SHARED {
-  defaultLanguageFlag = gb
-  defaultLanguageLabel = Translation Template
+  defaultLanguageFlag = multiple
+  defaultLanguageLabel = Global Tree
 }
 
 mod.web_layout {
+	hideTables = static_template,static_country_zones,static_currencies,static_territories,static_taxes,static_markets
+}
+mod.web_list {
 	hideTables = static_template,static_country_zones,static_currencies,static_territories,static_taxes,static_markets
 }
