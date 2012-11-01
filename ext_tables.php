@@ -3,7 +3,7 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-t3lib_extMgm::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:countrymanager/Configuration/TSconfig/page/defaultlanguage.txt">');
+t3lib_extMgm::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:countrymanager/Configuration/TSconfig/defaultlanguage.txt">');
 
 Tx_Extbase_Utility_Extension::registerPlugin(
 	$_EXTKEY,
