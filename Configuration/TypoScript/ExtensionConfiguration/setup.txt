@@ -1,3 +1,4 @@
+# Plugin Config
 plugin.tx_countrymanager {
 	view {
 		templateRootPath = {$plugin.tx_countrymanager.view.templateRootPath}
@@ -19,7 +20,7 @@ plugin.tx_countrymanager {
 	}
 }
 
-# Basic Language Configuration
+# General language handling (minus automatic configuration of languages)
 config {
 	# sys_language_mode is generated dynamically by backend module
 
@@ -30,6 +31,7 @@ config {
 	linkVars := addToList(L)
 }
 
+# Check if page from current country is translatet
 plugin.tx_countrymanager.languageExists = HMENU
 plugin.tx_countrymanager.languageExists {
 	noBlur = 1
@@ -65,3 +67,43 @@ plugin.tx_countrymanager.languageExists {
 
 # Needed for Backend Module
 module.tx_countrymanager.settings < plugin.tx_countrymanager.settings
+
+
+# Mapping for existing tables
+config.tx_extbase{
+	persistence{
+		classes{
+			Tx_Countrymanager_Domain_Model_CountryLanguage {
+				mapping {
+					tableName = sys_language
+					recordType = Tx_Countrymanager_CountryLanguage
+				}
+			}
+			
+			Tx_Countrymanager_Domain_Model_Country {
+				mapping {
+					tableName = static_countries
+					recordType = Tx_Countrymanager_Country
+					columns {
+						cn_short_en.mapOnProperty = cnshorten
+						cn_short_local.mapOnProperty = cnshortlocal
+						cn_tldomain.mapOnProperty = cntldomain
+					}
+				}
+			}
+			
+			Tx_Countrymanager_Domain_Model_Language {
+				mapping {
+					tableName = static_languages
+					recordType = Tx_Countrymanager_Language
+					columns {
+						lg_name_en.mapOnProperty = lgnameen
+						lg_name_local.mapOnProperty = lgnamelocal
+						lg_iso_2.mapOnProperty = lgiso
+					}
+				}
+			}
+			
+		}
+	}
+}

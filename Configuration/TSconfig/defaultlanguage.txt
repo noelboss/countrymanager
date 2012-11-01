@@ -1,0 +1,9 @@
+# This configures sys_language 0
+mod.SHARED {
+  defaultLanguageFlag = gb
+  defaultLanguageLabel = Base Tree (not visible in frontend)
+}
+
+mod.web_layout {
+	hideTables = static_template,static_country_zones,static_currencies,static_territories,static_taxes,static_markets
+}

@@ -3,6 +3,8 @@ if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
+t3lib_extMgm::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:countrymanager/Configuration/TSconfig/page/defaultlanguage.txt">');
+
 Tx_Extbase_Utility_Extension::registerPlugin(
 	$_EXTKEY,
 	'Country',
@@ -22,8 +24,9 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 );
 
 
-t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/ExtensionConfiguration', 'Typo3 Country Manager – Extension Configuration');
-t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/AutomaticLanguageConfiguration', 'Typo3 Country Manager – Automatic Language Configuration');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/ExtensionConfiguration', 'Country Manager – Extension Configuration');
+// moved to ext_typoscript_setup.txt
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/AutomaticLanguageConfiguration', 'Country Manager – Automatic Language Configuration (optional)');
 
 if (TYPO3_MODE === 'BE') {
 	/**

@@ -10,7 +10,7 @@ config {
 }
 
 ####################################
-# COUNTRY: Switzerland / Schweiz
+# Switzerland / Schweiz
 ####################################
 # German / Deutsch
 	[globalVar= GP:L=1] 
@@ -41,7 +41,7 @@ config {
 	[global]
 
 ####################################
-# COUNTRY: Germany / Deutschland
+# Germany / Deutschland
 ####################################
 # German / Deutsch
 	[globalVar= GP:L=4] 
@@ -63,7 +63,7 @@ config {
 	[global]
 
 ####################################
-# COUNTRY: France / France
+# France / France
 ####################################
 # French / Français
 	[globalVar= GP:L=6] 
@@ -76,7 +76,7 @@ config {
 	[global]
 
 ####################################
-# COUNTRY: United States / United States
+# United States / United States
 ####################################
 # English / English
 	[globalVar= GP:L=7] 

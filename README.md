@@ -6,7 +6,6 @@ Managing countries and languages was never an easy task with Typo3. Typo3 Countr
 
 Installation
 ===
-
 1. Install Extension "static_info_tables"
 2. Download and Install Extension "countrymanager"
 3. Add both static TypoScripts provieded by the extension to your TypoScript record (section Includes > Include static (from extensions))
@@ -15,7 +14,6 @@ Installation
 
 Configuration
 === 
-
 – Use the Constant Editor to configure some important things:
 1. Root Page – A country switch will always fallback to this page
 2. ID of the Main Country – Used for the automatic ts configuration
@@ -93,9 +91,9 @@ Create Language Configuration TypoScript
 After you have configured your countries, go to the Country Manager Backend module
 and checkt the automatically created configuration. Hit the "Update configuration" Button if
 everything is fine.
-For this to work you need to include the static typoscript template
-"Typo3 Country Manager – Automatic Language Configuration" in your template record.
 
+For this to work a static TS templates is automatically included by ext_typoscript_setup.txt
+You can still manually include it in your template and if you have to.
 
 
 Usage
@@ -103,20 +101,23 @@ Usage
 You can insert 3 different Plugins:
 - List of all countries expect the current (tt_content.list.20.countrymanager_countries)
 - List of languages of current country (tt_content.list.20.countrymanager_countries)
-NOT IMPLEMENTED CORRECTLY YET – Current country with languages (tt_content.list.20.countrymanager_languages)
+– Language switch for the current page (tt_content.list.20.countrymanager_languages)
 
 You can also use typoscript:
-page.10 < tt_content.list.20.countrymanager_countries
-page.20 < tt_content.list.20.countrymanager_country
-NOT IMPLEMENTED CORRECTLY YET page.30 < tt_content.list.20.countrymanager_languages
+– page.10 < tt_content.list.20.countrymanager_countries
+– page.20 < tt_content.list.20.countrymanager_country
+– page.30 < tt_content.list.20.countrymanager_languages
 
 
 
 FAQ
 ===
 What happens if I change the country?
+
 – You will be directed to the Page with the ID configured by plugin.tx_countrymanager.settings.rootUid
+
 What happenes if I change the language inside the same country
+
 – If possible, you will be directed to the same page just in a different language
 
 

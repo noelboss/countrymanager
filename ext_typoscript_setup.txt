@@ -1,7 +1,10 @@
+# Typo3 Country Manager – Automatic Language Configuration
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:countrymanager/Configuration/TypoScript/AutomaticLanguageConfiguration/setup.txt">
+
+# Mapping for existing tables
 config.tx_extbase{
 	persistence{
 		classes{
-
 			Tx_Countrymanager_Domain_Model_CountryLanguage {
 				mapping {
 					tableName = sys_language
