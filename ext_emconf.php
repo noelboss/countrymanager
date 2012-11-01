@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Typo3 Country Manager',
-	'description' => 'Managing countries and languages was never an easy task with Typo3. Typo3 Country Manager aims to fix this. Translating content for different countries with multiple languages becomes flexible and easy.',
+	'description' => 'Managing countries and languages was never an easy task with Typo3. Typo3 Country Manager aims to fix this. Translating content for different countries with multiple languages becomes flexible and easy. More on https://github.com/noelboss/countrymanager',
 	'category' => 'plugin',
 	'author' => 'Noel Bossart',
 	'author_email' => 'n.company at me dot com',

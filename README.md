@@ -124,3 +124,10 @@ What happenes if I change the language inside the same country
 Attribute
 ==
 Icon World designed by Mateo Zlatar from The Noun Project.
+
+Issues & Source
+===
+Visit https://github.com/noelboss/countrymanager
+
+
+© 2012 www.noelboss.ch
