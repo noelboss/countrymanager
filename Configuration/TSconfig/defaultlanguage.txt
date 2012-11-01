@@ -1,7 +1,7 @@
 # This configures sys_language 0
 mod.SHARED {
   defaultLanguageFlag = gb
-  defaultLanguageLabel = Base Tree (not visible in frontend)
+  defaultLanguageLabel = Translation Template
 }
 
 mod.web_layout {
