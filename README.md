@@ -17,7 +17,7 @@ Managing countries and languages was never an easy task with Typo3. Typo3 Countr
 
 
 ### URLs
-If you use RealUrl use this configuration instead of the standard one:
+If you use realurl use this configuration instead of the standard one:
 
 	'preVars' => array( 
 		array(
@@ -37,7 +37,7 @@ If you use RealUrl use this configuration instead of the standard one:
 		/* ... */
 	),
 
-If you use coolUri use this configuration instead of the standard one:
+If you use cooluri use this configuration instead of the standard one:
 
 	<uriparts>
 		<part>
@@ -60,7 +60,7 @@ If you use coolUri use this configuration instead of the standard one:
 The translation scheme with Country Manager is different as normal.
 For each language for each country you create a sys_language. For Example:
 
-* Generic Page Tree (Template) – sys_language 1 – NOT USED IN FRONTEND
+* Global Tree – sys_language 0 – NOT USED IN FRONTEND
 * Switzerland German – sys_language 1
 * Switzerland French – sys_language 2
 * Switzerland Italian – sys_language 3
